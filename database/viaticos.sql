@@ -88,6 +88,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `viaticos`.`OficioComision` (
   `idOficioComision` INT(11) NOT NULL AUTO_INCREMENT,
   `numeroOficio` VARCHAR(45) NOT NULL,
+  `fecha` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idOficioComision`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -159,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `viaticos`.`TarifasHospedaje` (
   `idTarifasHospedaje` INT(11) NOT NULL AUTO_INCREMENT,
   `tarifasHospedaje` INT NOT NULL,
   `area` VARCHAR(15) NOT NULL,
-  `nivel` VARCHAR(11) NOT NULL,
+  `nivel` VARCHAR(10) NOT NULL,
   `puesto` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`idTarifasHospedaje`))
 ENGINE = InnoDB
@@ -222,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `viaticos`.`TarifasAlimentos` (
   `tarifaCena` INT NULL,
   `area` VARCHAR(15) NOT NULL,
   `nivel` VARCHAR(10) NOT NULL,
-  `puesto` VARCHAR(45) NOT NULL,
+  `puesto` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`idTarifasAlimentos`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
