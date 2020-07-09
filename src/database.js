@@ -1,10 +1,10 @@
 // Imports
-const mysql = require('mysql'); // Módulo de MySQL
-const {promisify} = require('util'); // Obtiene solo el objeto promisify del módulo 'util'
-const {database} = require('./keys'); // Obtiene solo el objeto database del módulo 'keys'
+const mysql = require('mysql'); // MySQL module
+const {promisify} = require('util'); // Getting only the object promisify of the module 'util'
+const {database} = require('./keys'); // Getting only the object database of the module 'keys'
 
-const pool = mysql.createPool(database); // Crea un pool de conexiones a la base de datos
-pool.getConnection((err, connection)=> // Maneja los errores
+const pool = mysql.createPool(database); // Create a connections pool of the MySQL module
+pool.getConnection((err, connection)=> // Handling the errors.
 {
   if(err)
   {
@@ -30,6 +30,6 @@ pool.getConnection((err, connection)=> // Maneja los errores
 });
 
 // Promisify Pool Querys
-pool.query = promisify(pool.query); // Con este módulo permite que aquellas funciones que solo admiten callbacks se puedan manejar con promesas
+pool.query = promisify(pool.query); // With this module will accept promisses
 
 module.exports = pool;

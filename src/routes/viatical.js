@@ -4,10 +4,12 @@ const express = require('express');
 // Initializations
 const router = express.Router();
 
-// Routes
-router.get('/', (req, res) =>
+// Connection to Database
+const pool = require('../database');
+
+router.get('/add', (req, res) =>
 {
-  res.send("Hello World");
+  res.render('viatical/choosepath');
 });
 
 // Exports modules
