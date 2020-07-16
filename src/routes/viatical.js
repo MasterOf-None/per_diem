@@ -12,5 +12,10 @@ router.get('/choosepath', (req, res) =>
   res.render('viatical/choosepath');
 });
 
+router.post('choosepath', () =>
+{
+  res.send('Received');
+});
+
 // Exports modules
 module.exports = router;
