@@ -12,13 +12,13 @@ app.set('appName', 'Sistema Integral de Gestión de Viáticos');
 app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine(
-  ".hbs",
+  '.hbs',
   exphbs({
-    defaultLayout: "main",
-    layoutsDir: path.join(app.get("views"), "layouts"),
-    partialsDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",
-    helpers: require("./lib/handlebars")
+    defaultLayout: 'main',
+    layoutsDir: path.join(app.get('views'), 'layouts'),
+    partialsDir: path.join(app.get('views'), 'partials'),
+    extname: '.hbs',
+    helpers: require('./lib/handlebars')
   })
 );
 app.set('view engine', '.hbs');
@@ -45,4 +45,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Starting the server
 app.listen(app.get('port'), () => {
   console.log(`${app.get('appName')} on port: ${app.get('port')}`);
+  var os = require('os');
+  console.log(os.hostname());
 });

@@ -1,65 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orden de Comisión</title>
-    <link rel="stylesheet" href="./css/commissionorder.css">
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/x-icon">
-  </head>
+<header>
+  <h1>Orden de Comision</h1>
+</header>
 
+<form action="/viatical/commissionorder" method="POST">
 
-  <body>
-    <header>
-      <h1>Orden de Comision</h1>
-    </header>
-    <main>
+  <fieldset>
+    <legend>Datos de Comisión</legend>
 
-      <form action="./choosepath.html">
-        <fieldset>
-          <legend>Datos de Comisión</legend>
-          <div>
-            <label>
-              Seleccione los días
-              <input type="number" name="commissionDay" id="">
-            </label>
-            <label>
-              Selecciones la fecha
-              <input type="date" name="commissionDate" id="">
-            </label>
-          </div>
-          <div>
-            <label>
-              Seleccione la hora
-              <input type="time" name="commissionHour" id="">
-            </label>
-            <label>
-              Ingrese el objetivo de la comisión
-              <textarea name="commissionObjetive" id="" cols="30" rows="4"></textarea>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Datos del Empleado</legend>
-          <div>
-            <label>
-              Seleccione el nombre del empleado
-              <select name="employName" id="">
-                <optgroup>Seleccione</optgroup>
-                <option value="nEmploy">Ramiro Fuentes</option>
-                <option value="nEmploy">Ofelia Díaz</option>
-                <option value="nEmploy">Rolando Mejía</option>
-                <option value="nEmploy">Cirilo Pacheco</option>
-                <option value="nEmploy">Mariana Hernandez</option>
-                <option value="nEmploy">Pedro Perez</option>
-              </select>
-            </label>
-          </div>
-        </fieldset>
-        <div>
-          <input type="submit" name="commissionSubmit" id="" value="Aceptar">
-        </div>
-      </form>
-    </main>
-  </body>
-</html>
+    <div>
+      <label>
+        Ingrese cúantos días de comisión
+        <input type="number" name="commissionDay" id="" placeholder="Ingrese días" aria-label="No. Días" required autofocus="autofocus"></label>
+      
+      <label>
+        Seleccione fecha
+        <input type="date" name="commissionDate" id="" placeholder="Seleccione fecha" aria-label="Fecha" required></label>
+    </div>
+    
+    <div>
+      <label>
+        Seleccione hora
+        <input type="time" name="commissionHour" id="" placeholder="Seleccione hora" aria-label="Hora" required></label>
+      
+      <label>
+        Ingrese objetivo de comisión
+        <textarea name="commissionObjective" id="" rows="5" placeholder="Objetivo" aria-label="Objetivo" required></textarea></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Datos de Empleado</legend>
+      
+      <label>
+        Seleccione empleado
+
+        <select name="employeeName" id="" required>
+
+          <optgroup label="Seleccione">
+            {{#each queryEmployees}}
+              <option value="{idEmpleado}">{{nombre}} {{apPaterno}} {{apMaterno}}</option>
+            {{/each}}
+          </optgroup>
+          
+        </select></label>
+
+  </fieldset>
+
+    <input type="submit" id="" value="Aceptar">
+</form>
