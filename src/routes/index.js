@@ -7,7 +7,7 @@ const router = express.Router();
 // Routes
 router.get('/', (req, res) =>
 {
-  res.send("Hello World");
+  res.render('viatical/index');
 });
 
 // Exports modules

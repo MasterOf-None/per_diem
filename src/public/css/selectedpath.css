@@ -1,4 +1,4 @@
-body
+/* body
 {
   font-family: Arial;
   background-color: #18A383;
@@ -17,13 +17,13 @@ header h1
   font-family: Arial;
   font-size: 20px;
   color: #CCC;
-}
+} */
 
 #main-container
 {
   margin: 150px auto;
   width: 600px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
 }
 
 caption
