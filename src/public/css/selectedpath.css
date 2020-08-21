@@ -19,8 +19,7 @@ header h1
   color: #CCC;
 } */
 
-#main-container
-{
+#main-container {
   margin: 150px auto;
   width: 600px;
   /* border: solid 1px black; */
@@ -64,7 +63,7 @@ tr:hover td
   color: white;
 }
 
-footer
+/* footer
 {
   width: 100%;
 }
@@ -74,4 +73,4 @@ footer span
   width: 200px;
   padding: 20px;
   margin-right: 50px;
-}
+} */
