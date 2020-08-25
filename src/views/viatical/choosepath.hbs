@@ -25,10 +25,16 @@
   <fieldset>
     <legend>Destino</legend>
         <span><label>
-          Ingrese el municipio de destino
+          Seleccione el municipio de destino
 
-          <input name="choosePathDestiny" id="" placeholder="Escriba el municipio de destino" aria-label="Destino" required>
+          {{!-- <input name="choosePathDestiny" id="" placeholder="Escriba el municipio de destino" aria-label="Destino" required> --}}
           
+          <select name="choosePathDestiny" id="">
+            <optgroup label="Seleccione">
+            {{#each offices}}
+              <option value="{{this}}">{{this}}</option>
+            {{/each}}
+          </select>
         </label></span>
 
   </fieldset>

@@ -10,18 +10,25 @@
     <div>
       <label>
         Ingrese cúantos días de comisión
-        <input type="number" name="commissionDay" id="" placeholder="Ingrese días" aria-label="No. Días" required autofocus="autofocus"></label>
+        <input type="number" name="commissionDay" id="" min="05:00" max="18:00" placeholder="Ingrese días" aria-label="No. Días" required autofocus="autofocus"></label>
       
       <label>
         Seleccione fecha
-        <input type="date" name="commissionDate" id="" placeholder="Seleccione fecha" aria-label="Fecha" required></label>
+        <input type="date" name="commissionDate" id="" min="2020-04-01" max="2050-04-20" placeholder="Seleccione fecha" aria-label="Fecha" required></label>
     </div>
     
     <div>
       <label>
         Seleccione hora
         <input type="time" name="commissionHour" id="" placeholder="Seleccione hora" aria-label="Hora" required></label>
-      
+        <details>
+          <summary>Leéme</summary>
+          <p>
+            El formato en Chrome es 24 horas
+            <br>
+            En Mozilla Firefox el formato es de 12 horas.
+          </p>
+        </details>
       <label>
         Ingrese objetivo de comisión
         <textarea name="commissionObjective" id="" rows="5" placeholder="Objetivo" aria-label="Objetivo" required></textarea></label>

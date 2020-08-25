@@ -1,8 +1,7 @@
 /* body
 {
   font-family: Arial;
-  background-color: #18A383;
-  box-sizing: border-box;
+  background-color: ##632432;
 }
 
 header
@@ -17,48 +16,42 @@ header h1
   font-family: Arial;
   font-size: 20px;
   color: #CCC;
-} */
-
-#main-container {
-  margin: 150px auto;
-  width: 600px;
-  /* border: solid 1px black; */
 }
+
+#container {
+  margin: 50px 200px;
+  width: 600px;
+}*/
 
 caption
 {
   background-color: #215732;
-  border-bottom: solid 5px #0F362D;
   color: white;
 }
 
-table
-{
+table {
   background-color: white;
   text-align: left;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
+  color: black;
 }
 
-thead
-{
+th, td {
+  padding: 20px;
+}
+
+thead {
   background-color: #246355;
   border-bottom: solid 5px #0F362D;
   color: white;
 }
 
-th, td
-{
-  padding: 20px;
-}
-
-tr:nth-child(even)
-{
+tr:nth-child(even ){
   background-color: #ddd;
 }
 
-tr:hover td
-{
+tr:hover td{
   background-color: #369681;
   color: white;
 }
