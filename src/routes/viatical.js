@@ -42,6 +42,11 @@ router.get('/choosepath', (req, res) => {
 });
 
 router.post('/choosepath', (req, res) => {
+  const { choosePathOrigin, choosePathDestiny } = req.body;
+  const choosepath = {
+    choosePathOrigin,
+    choosePathDestiny
+  }
   res.redirect('selectedpath');
 });
 
