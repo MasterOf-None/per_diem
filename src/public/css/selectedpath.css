@@ -17,9 +17,21 @@ header h1
   font-family: Arial;
   font-size: 20px;
   color: #CCC;
+
+  footer
+{
+  width: 100%;
+}
+
+footer span
+{
+  width: 200px;
+  padding: 20px;
+  margin-right: 50px;
+}
 } */
 
-#main-container
+.container
 {
   margin: 150px auto;
   width: 600px;
@@ -62,16 +74,4 @@ tr:hover td
 {
   background-color: #369681;
   color: white;
-}
-
-footer
-{
-  width: 100%;
-}
-
-footer span
-{
-  width: 200px;
-  padding: 20px;
-  margin-right: 50px;
 }
