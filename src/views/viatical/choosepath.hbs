@@ -12,13 +12,11 @@
 
       <select name="choosePathOrigin" id="" required>
         <optgroup label="Seleccione">
-          {{#each offices}}
-            <option value="{{this}}">{{this}}</option>
+          {{#each queryOrigin}}
+            <option value="{{origenOficina}}">{{origenOficina}}</option>
           {{/each}}
         </optgroup>
-      </select>
-
-    </label></span>
+      </select></label></span>
 
   </fieldset>
 
@@ -26,10 +24,15 @@
     <legend>Destino</legend>
         <span><label>
           Ingrese el municipio de destino
+          {{!-- <input name="choosePathDestiny" id="" placeholder="Escriba el municipio de destino" aria-label="Destino" required> --}}
 
-          <input name="choosePathDestiny" id="" placeholder="Escriba el municipio de destino" aria-label="Destino" required>
-          
-        </label></span>
+          <select name="choosePathDestiny" id="" required>
+          <optgroup label="Seleccione">
+            {{#each queryDestiny}}
+              <option value="{{destinoMunicipio}}">{{destinoMunicipio}}</option>
+            {{/each}}
+          </optgroup>
+        </select></label></span>
 
   </fieldset>
   
