@@ -48,11 +48,15 @@ router.post('/choosepath', (req, res) => {
   };
   console.log(req.body);
 
-  res.redirect("selectedpath");
+  res.redirect('selectedpath');
 });
 
 router.get('/selectedpath', (req, res) => {
   res.render('viatical/selectedpath', {style: 'selectedpath.css'});
+});
+
+router.get('/others', (req, res) => {
+  res.render('viatical/others');
 });
 
 // Exports modules
