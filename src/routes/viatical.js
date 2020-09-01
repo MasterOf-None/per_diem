@@ -59,5 +59,13 @@ router.get('/others', (req, res) => {
   res.render('viatical/others');
 });
 
+router.get('/foods', (req, res) => {
+  res.render('viatical/foods');
+});
+
+router.get('/lodging', (req, res) => {
+  res.render('viatical/lodging');
+});
+
 // Exports modules
 module.exports = router;
