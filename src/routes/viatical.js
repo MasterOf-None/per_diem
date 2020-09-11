@@ -3,6 +3,8 @@ const express = require('express');
 
 // Initializations
 const router = express.Router();
+// Este objeto contendrá la data de los formularios
+var data = {};
 
 // Connection to Database
 const pool = require('../database');
@@ -19,7 +21,14 @@ router.get('/commissionorder', async (req, res) => {
 router.post('/commissionorder', (req, res) => {
   // Aqui se registran los datos del formulario: commissionorder
   const { commissionDay, commissionDate, commissionHour, commissionObjective, employeeName } = req.body;
-  const newCommissionOrder = {
+  // const newCommissionOrder = {
+  //   commissionDay,
+  //   commissionDate,
+  //   commissionHour,
+  //   commissionObjective,
+  //   employeeName
+  // };
+  data = {
     commissionDay,
     commissionDate,
     commissionHour,
@@ -34,7 +43,7 @@ router.get('/choosepath', async (req, res) => {
   // Consulta a BD para cargar los nombres de las oficinas regionales
   const queryOrigin = await pool.query('SELECT DISTINCT origenOficina FROM TarifasAutomovilTrayecto ORDER BY origenOficina');
   // Consulta a BD para cargar los nombres de los municipios de destino
-  const queryDestiny = await pool.query('SELECT destinoMunicipio FROM TarifasAutomovilTrayecto ORDER BY destinoMunicipio');
+  const queryDestiny = await pool.query('SELECT DISTINCT destinoMunicipio FROM TarifasAutomovilTrayecto ORDER BY destinoMunicipio');
 
   res.render('viatical/choosepath', {queryOrigin, queryDestiny});
 });
@@ -42,17 +51,20 @@ router.get('/choosepath', async (req, res) => {
 router.post('/choosepath', (req, res) => {
   // Aqui se registran los datos de la ruta seleccionada
   const { choosePathOrigin, choosePathDestiny } = req.body;
-  const newChoosePath = {
-    choosePathOrigin,
-    choosePathDestiny,
-  };
-  console.log(req.body);
+  data['choosePathOrigin'] = choosePathOrigin;
+  data['choosePathDestiny'] = choosePathDestiny;
 
   res.redirect('selectedpath');
 });
 
-router.get('/selectedpath', (req, res) => {
-  res.render('viatical/selectedpath', {style: 'selectedpath.css'});
+router.get('/selectedpath', async (req, res) => {
+  // Consulta a BD para cargar la distancia y el tiempo de la ruta seleccionada 
+  const query = `SELECT distancia, tiempo FROM TarifasAutomovilTrayecto WHERE origenOficina = '${data.choosePathOrigin}' and destinoMunicipio = '${data.choosePathDestiny}'`;
+  // Ejecución de la consulta
+  const querySelectedPath = await pool.query(query);
+  data['selectedPathDistance'] = querySelectedPath[0].distancia;
+  data['selectedPathTime'] = querySelectedPath[0].tiempo;
+  res.render('viatical/selectedpath', {style: 'selectedpath.css', data});
 });
 
 router.get('/others', (req, res) => {
