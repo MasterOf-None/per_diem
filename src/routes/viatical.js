@@ -5,9 +5,10 @@ const express = require('express');
 const router = express.Router();
 // Este objeto contendrá la data de los formularios
 var data = {};
-
 // Connection to Database
 const pool = require('../database');
+// Make a PDF
+const pdf = require('../lib/makepdf');
 
 router.get('/commissionorder', async (req, res) => {
   // Consulta a BD para cargar los nombres de los empleados en la lista de la vista
@@ -21,13 +22,7 @@ router.get('/commissionorder', async (req, res) => {
 router.post('/commissionorder', (req, res) => {
   // Aqui se registran los datos del formulario: commissionorder
   const { commissionDay, commissionDate, commissionHour, commissionObjective, employeeName } = req.body;
-  // const newCommissionOrder = {
-  //   commissionDay,
-  //   commissionDate,
-  //   commissionHour,
-  //   commissionObjective,
-  //   employeeName
-  // };
+  
   data = {
     commissionDay,
     commissionDate,
