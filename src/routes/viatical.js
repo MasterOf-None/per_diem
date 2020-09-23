@@ -7,8 +7,6 @@ const router = express.Router();
 var data = {};
 // Connection to Database
 const pool = require('../database');
-// Make a PDF
-const pdf = require('../lib/makepdf');
 
 router.get('/commissionorder', async (req, res) => {
   // Consulta a BD para cargar los nombres de los empleados en la lista de la vista
