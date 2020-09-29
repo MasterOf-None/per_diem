@@ -1,5 +1,7 @@
 // Imports
 const express = require('express');
+const tollBooth = require('./../lib/tollBooth');
+console.log(tollBooth.tollBooth);
 
 // Initializations
 const router = express.Router();
@@ -20,7 +22,7 @@ router.get('/commissionorder', async (req, res) => {
 router.post('/commissionorder', (req, res) => {
   // Aqui se registran los datos del formulario: commissionorder
   const { commissionDay, commissionDate, commissionHour, commissionObjective, employeeName } = req.body;
-  
+
   data = {
     commissionDay,
     commissionDate,
@@ -51,8 +53,13 @@ router.post('/choosepath', (req, res) => {
 });
 
 router.get('/selectedpath', async (req, res) => {
-  // Consulta a BD para cargar la distancia y el tiempo de la ruta seleccionada 
+  // Consulta a BD para cargar la distancia y el tiempo de la ruta seleccionada
   const query = `SELECT distancia, tiempo FROM TarifasAutomovilTrayecto WHERE origenOficina = '${data.choosePathOrigin}' and destinoMunicipio = '${data.choosePathDestiny}'`;
+
+  // Consulta a BD parara cargar las casetas de peaje
+  // const tolNames = tollBoth.toString;
+  // console
+
   // Ejecución de la consulta
   const querySelectedPath = await pool.query(query);
   data['selectedPathDistance'] = querySelectedPath[0].distancia;
