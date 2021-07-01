@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sistema Integral de Gestión de Viáticos">
+		<meta name="author" content="Procuraduría Estatal de Protección al Medio Ambiente">
+		<meta name="key" content="Procuraduría Estatal de Protección al Medio Ambiente, PMA, Sistema Integral de Gestión de Viáticos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Integral de Gestión Viáticos</title>
+    {{!-- Google Fonts --}}
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    {{!-- Styles --}}
+    <link rel="stylesheet" href="/css/sidemenu.css">
+    <link rel="stylesheet" href="/css/{{style}}">
+    <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body class="body-expanded">
+    <div id="sidemenu" class="menu-expanded">
+
+      <!-- HEADER -->
+      <div id="header">
+        <div id="title"><span>PMA</span></div>
+        <div id="menu-btn">
+          <div class="btn-hamburger"></div>
+          <div class="btn-hamburger"></div>
+          <div class="btn-hamburger"></div>
+        </div>
+      </div>
+
+      <!-- PROFILE -->
+      <div id="profile">
+        <div id="photo"><img src="/icons/photo.svg" alt=""></div>
+        <div id="name"><span>Usuario</span></div>
+      </div>
+
+      <!-- ITEMS -->
+      <div id="menu-items">
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/cloud-services.svg" alt=""></div>
+            <div class="title"><span>Orden Comisión</span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/a.svg" alt=""></div>
+            <div class="title"><span>Ruta</span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/b.svg" alt=""></div>
+            <div class="title"><span>Datos Ruta</span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/c.svg" alt=""></div>
+            <div class="title"><span>Hospedaje</span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/d.svg" alt=""></div>
+            <div class="title"><span>Comidas</span></div>
+          </a>
+        </div>
+
+        {{!-- <div class="item separator"></div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/e.svg" alt=""></div>
+            <div class="title"><span>Taxis/span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/f.svg" alt=""></div>
+            <div class="title"><span>Gasolina</span></div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <div class="icon"><img src="/icons/g.svg" alt=""></div>
+            <div class="title"><span>Casetas</span></div>
+          </a>
+        </div> --}}
+
+      </div>
+    </div>
+
+    <div id="main-container">
+      {{!-- Aqui va el texto de la página principal --}}
+
+      {{{body}}}
+    </div>
+
+    <script>
+      const btn = document.querySelector('#menu-btn');
+      const menu = document.querySelector('#sidemenu');
+      btn.addEventListener('click', e =>
+      {
+        menu.classList.toggle("menu-expanded");
+        menu.classList.toggle("menu-collapsed");
+
+        document.querySelector('body').classList.toggle('body-expanded');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<header>
+  <h1>Orden de Comision</h1>
+</header>
+
+<form action="/viatical/commissionorder" method="POST" autocomplete="off">
+
+  <fieldset class="first-fielset">
+    <legend>Datos de Comisión</legend>
+
+    <div class="container">
+      <label>
+        Ingrese cúantos días de comisión
+        <input type="number" name="commissionDay" id="" min="1" max="5" value="1" placeholder="Ingrese días" aria-label="No. Días" required autofocus="autofocus"></label>
+
+      <label>
+        Seleccione fecha
+        <input type="date" name="commissionDate" id="" placeholder="Seleccione fecha" aria-label="Fecha" required></label>
+    </div>
+
+    <div>
+      <label>
+        Seleccione hora
+        <input type="time" name="commissionHour" id="" min="09:00" max="18:00" placeholder="Seleccione hora" aria-label="Hora" required></label>
+
+      <label>
+        Ingrese objetivo de comisión
+        <textarea name="commissionObjective" id="" rows="5" placeholder="Objetivo" aria-label="Objetivo" required></textarea></label>
+
+      <details>
+        <summary>Leeme</summary>
+        <p>
+          En Chrome el formato predeterminado es de 12 horas. Deberá seleccionar AM ó PM.
+          <br>
+          En caso de utilizar el navegador Firefox el formato es de 24 horas.
+        </p>
+      </details>
+    </div>
+  </fieldset>
+
+  <fieldset class="second-fielset">
+    <legend>Datos de Empleado</legend>
+
+      <label>
+        Seleccione empleado
+
+        <select name="employeeName" id="" required>
+
+          <optgroup label="Seleccione">
+            {{#each queryEmployees}}
+              <option value="{{idEmpleado}}">{{nombre}} {{apPaterno}} {{apMaterno}}</option>
+            {{/each}}
+          </optgroup>
+
+        </select></label>
+
+  </fieldset>
+
+    <input type="submit" id="" value="Aceptar">
+</form>

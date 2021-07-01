@@ -1,0 +1,33 @@
+{
+  "name": "per_diem",
+  "version": "1.0.0",
+  "description": "Comprehensive Viaticum Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterOf-None/per_diem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasterOf-None/per_diem/issues"
+  },
+  "homepage": "https://github.com/MasterOf-None/per_diem#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "jspdf": "^2.1.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "nodemon": "^2.0.4"
+  }
+}

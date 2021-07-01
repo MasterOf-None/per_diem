@@ -1,0 +1,26 @@
+body
+{
+  font-family: Arial;
+  background-color: #18A383;
+  box-sizing: border-box;
+}
+
+header
+{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+header h1
+{
+  font-family: Arial;
+  font-size: 20px;
+  color: #CCC;
+}
+
+main
+{
+  padding-left: 200px;
+  align-items: center;
+}

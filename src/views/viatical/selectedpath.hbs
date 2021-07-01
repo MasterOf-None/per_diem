@@ -1,0 +1,54 @@
+<header>
+  <h1>Datos de la ruta seleccionada</h1>
+</header>
+
+<table>
+  <caption>Datos de la Ruta Seleccionada</caption>
+  <thead>
+    <th>Origen</th>
+    <th>Destino</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{data.choosePathOrigin}}</td>
+      <td>{{data.choosePathDestiny}}</td>
+    </tr>
+  </tbody>
+
+  <thead>
+    <th>Distancia</th>
+    <th>Tiempo</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{data.selectedPathDistance}} Km</td>
+      <td>{{data.selectedPathTime}} Minutos</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Casetas identificadas en el trayecto</caption>
+  <thead>
+    <th>Nombre de Caseta</th>
+  </thead>
+  <tbody>
+    <tr>
+      //Aqui la sección de casetas
+      {{!-- {{#each tollRoad}}
+        <td>{{}}</td>
+      {{/each}} --}}
+    </tr>
+  </tbody>
+</table>
+
+<section>
+  <span>
+    <button name="selectedPathButtonBack" id="">
+      <a href="./choosepath">Anterior</a>
+    </button>
+  </span>
+  <span>
+    <button name="selectedPathButtonSend" id=""><a href="./others">Agregar más Viáticos</a></button>
+  </span>
+</section>

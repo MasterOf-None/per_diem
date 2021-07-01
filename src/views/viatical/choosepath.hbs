@@ -1,0 +1,43 @@
+<header>
+    <h1>Seleccione la Ruta</h1>
+</header>
+
+<form action="/viatical/choosepath" method="POST">
+
+  <fieldset>
+    <legend>Origen</legend>
+
+    <span><label>
+      Seleccione la oficina de donde partirá
+
+      <select name="choosePathOrigin" id="" required>
+        <optgroup label="Seleccione">
+          {{#each queryOrigin}}
+            <option value="{{origenOficina}}">{{origenOficina}}</option>
+          {{/each}}
+        </optgroup>
+      </select></label></span>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Destino</legend>
+        <span><label>
+          Ingrese el municipio de destino
+          {{!-- <input name="choosePathDestiny" id="" placeholder="Escriba el municipio de destino" aria-label="Destino" required> --}}
+
+          <select name="choosePathDestiny" id="" required>
+          <optgroup label="Seleccione">
+            {{#each queryDestiny}}
+              <option value="{{destinoMunicipio}}">{{destinoMunicipio}}</option>
+            {{/each}}
+          </optgroup>
+        </select></label></span>
+
+  </fieldset>
+
+  <div>
+    <input type="submit" name="choosePathBack" id="" value="Anterior">
+    <input type="submit" name="choosePathSubmit" id="" value="Aceptar">
+  </div>
+</form>
