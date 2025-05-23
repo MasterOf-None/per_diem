@@ -64,8 +64,6 @@ cd per_diem
 
 3. **Install dependencies:**
 
-**Using [npm](https://www.npmjs.com):**
-
 ```Bash
 npm install
 ```
