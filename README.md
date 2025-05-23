@@ -15,7 +15,7 @@
 
 **Why per_diem?**
 
-- This project streamlines the management of travel expenses and commission orders, ensuring a seamless experience for users. The core freatures include:
+This project streamlines the management of travel expenses and commission orders, ensuring a seamless experience for users. The core freatures include:
 
 - :file_folder: **Comprehensive Viaticum Management:** Streamlines the managements of travel expenses and commission orders.
 - :wrench: **Modular Architecture:** Promotes scalability and maintainability through a well-structured codebase.
@@ -43,8 +43,8 @@
 
 - This project requires the following dependencies:
 
-    1. **Programming Language:** JavaScript
-    2. **Package Manager:** Npm
+1. **Programming Language:** JavaScript
+2. **Package Manager:** Npm
 
 ## Installation
 
