@@ -1,5 +1,24 @@
 # Comprehensive Viaticum Management System
 
+# PER_DIEM
+
+*Streamline your travel expenses, maximize your efficiency.*
+
+![Last Commit](https://img.shields.io/github/last-commit/MasterOf-None/per_diem)
+![Top Language](https://img.shields.io/github/languages/top/MasterOf-None/per_diem)
+![Languages Count](https://img.shields.io/github/languages/count/MasterOf-None/per_diem)
+
+*Built with the tools and technologies:*
+
+![Express](https://img.shields.io/badge/Express-black?logo=express&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-black?logo=json&logoColor=white)
+![npm](https://img.shields.io/badge/npm-red?logo=npm&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=black)
+![Nodemon](https://img.shields.io/badge/Nodemon-green?logo=nodemon&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-blue?logo=mysql&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-purple?logo=eslint&logoColor=white)
+
+
 # Table of Contents
 - [Overview](#overview)
 - [Architecture](#project-architecture)
