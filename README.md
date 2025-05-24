@@ -1,8 +1,6 @@
-# Comprehensive Viaticum Management System
-
 # PER_DIEM
 
-*Streamline your travel expenses, maximize your efficiency.*
+*Comprehensive Viaticum Management System*
 
 ![Last Commit](https://img.shields.io/github/last-commit/MasterOf-None/per_diem)
 ![Top Language](https://img.shields.io/github/languages/top/MasterOf-None/per_diem)
@@ -40,7 +38,7 @@ This project streamlines the management of travel expenses and commission orders
 - :wrench: **Modular Architecture:** Promotes scalability and maintainability through a well-structured codebase.
 - :bar_chart: **User-friendly Interface:** Simplifies user interactions with intuitive forms for expense submissions.
 - :link: **Robust Database Integration:** Efficiently manages data operations with intuitive forms for expense submissions.
-- :rainbow: ** Dynamic Content Rendering:** Utilizes Handlebars for seamless integration of data presentation.
+- :rainbow: **Dynamic Content Rendering:** Utilizes Handlebars for seamless integration of data presentation.
 - :warning: **Error Handling:** Gracefully manages connections errors to enhance application reliability.
 
 ## Project Architecture
