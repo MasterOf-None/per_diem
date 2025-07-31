@@ -40,15 +40,15 @@ The project follows a modular structure using Express.js for the backend, Handle
 
 ### Project Routes
 
-- index
-- commissionorder
-- selectedpath
-- others
-- lodging
-- food
-- taxi
-- fuel
-- toolbooth
+- **index**
+- **commissionorder**
+- **selectedpath**
+- **others**
+- **lodging**
+- **food**
+- **taxi**
+- **fuel**
+- **toolbooth**
 
 ## Getting Started
 
@@ -133,7 +133,6 @@ per_diem/
 - **Morgan** — HTTP request logger
 - **Nodemon** — Development auto-reloader
 - **ESLint** — Linting and code quality
-- **jsPDF** — PDF generation (for reports)
 
 <!-- ## Contributing
 
